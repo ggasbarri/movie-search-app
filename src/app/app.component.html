@@ -1,7 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-  <app-search-bar class="row"></app-search-bar>
+<div class="container main">
+  <app-search-bar (startNewSearch)="startNewSearch()" [currentMovie]="currentMovie" class="row"></app-search-bar>
   <app-movie-card *ngIf="currentMovie" class="row" [movie]="currentMovie"></app-movie-card>
-  <app-movie-search-item *ngIf="!currentMovie" class="row"></app-movie-search-item>
-  <app-footer></app-footer>
 </div>
+<app-footer class="page-footer"></app-footer>
